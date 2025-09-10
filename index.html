@@ -6,17 +6,29 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#317EFB"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; text-align:center; margin:0; padding:0; display:flex; flex-direction:column; justify-content:center; height:100vh; }
+    button { padding: 15px 25px; margin:10px; font-size:16px; cursor:pointer; border-radius:8px; border:none; background-color:#317EFB; color:white; }
+    h1 { margin-bottom:30px; }
+  </style>
 </head>
-<body style="margin:0; height:100vh;">
-  <!-- Tela inicial (login) -->
-  <iframe src="https://script.google.com/macros/s/AKfycbzZ6HLGepS42hE8Fp5azapwmyWii2QuSK9APkfbxM2pUcOOeRIoTNmOxJECc-qbSbOrkw/exec"
-          style="border:0; width:100%; height:100%;"></iframe>
+<body>
+  <h1>Bem-vindo</h1>
+  
+  <!-- Botão que abre o Google Script em nova aba -->
+  <button onclick="abrirScript()">Abrir Sistema</button>
 
   <script>
+    function abrirScript() {
+      window.open(
+        'https://script.google.com/macros/s/AKfycbzZ6HLGepS42hE8Fp5azapwmyWii2QuSK9APkfbxM2pUcOOeRIoTNmOxJECc-qbSbOrkw/exec', 
+        '_blank'
+      );
+    }
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
     }
   </script>
 </body>
 </html>
-

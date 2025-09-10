@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu App</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#317EFB"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin:0; height:100vh;">
+  <!-- Tela inicial (login) -->
+  <iframe src="https://script.google.com/macros/s/AKfycbzZ6HLGepS42hE8Fp5azapwmyWii2QuSK9APkfbxM2pUcOOeRIoTNmOxJECc-qbSbOrkw/exec"
+          style="border:0; width:100%; height:100%;"></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
+
